@@ -33,8 +33,8 @@ public void unMessageAlertEstAffiche(String message) {
 public void jAccepteLeMessageAlert() {
     accesQuestionnaireSansInscriptionPage.acceptAlert();
 }
-@Then("le message alert est acceppter et je me redirige vers la page home {string}")
-public void leMessageAlertEstAcceppterEtJeMeRedirigeVersLaPageHome(String text) {
+@Then("je me redirige vers la page home {string}")
+public void jeMeRedirigeVersLaPageHome(String text) {
     assertEquals(text, accesQuestionnaireSansInscriptionPage.getWelcomeText());
 }
 }

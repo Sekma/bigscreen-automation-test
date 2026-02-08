@@ -4,6 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import java.time.Duration;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.e2etests.automation.utils.ConfigFileReader;
 import com.e2etests.automation.utils.Setup;
@@ -12,7 +16,7 @@ public class AccesQuestionnaireSansInscriptionPage {
 
 	private ConfigFileReader configFileReader; 
 	
-	/** @FindBy **/
+	//** @FindBy **//
 	@FindBy(how = How.XPATH, using = "//a[normalize-space()='Questionnaire']")
 	public WebElement questionnaireButton;
 
@@ -34,9 +38,12 @@ public class AccesQuestionnaireSansInscriptionPage {
     public String getAlertText(){
         return Setup.getDriver().switchTo().alert().getText();
     }
-    public void acceptAlert(){
-        Setup.getDriver().switchTo().alert().accept();
-    }
+   public void acceptAlert() {
+    WebDriverWait wait = new WebDriverWait(Setup.getDriver(), Duration.ofSeconds(30));
+    Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+    alert.accept();
+}
+
     public String getWelcomeText(){
         return welcomeText.getText();
     }
