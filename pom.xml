@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>AutomationQA</groupId>
-  <artifactId>AutomationQA</artifactId>
+  <groupId>BigscreenAutomationQA</groupId>
+  <artifactId>BigscreenAutomationQA</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>AutomationQA</name>
+  <name>BigscreenAutomationQA</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
